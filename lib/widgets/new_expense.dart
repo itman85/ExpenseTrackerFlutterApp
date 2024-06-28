@@ -61,6 +61,7 @@ class _NewExpenseState extends State<NewExpense> {
         amount: enterAmount,
         date: _selectedDate!,
         category: _selectedCategory));
+    Navigator.pop(context); // close bottom sheet after submit
   }
 
   @override
@@ -74,7 +75,7 @@ class _NewExpenseState extends State<NewExpense> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
       child: Column(
         children: [
           TextField(
