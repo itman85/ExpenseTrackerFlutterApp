@@ -29,6 +29,8 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpensePopup() {
     showModalBottomSheet(
+        useSafeArea:
+            true, // it will padding the status bar, make sure the content display in safe area, no overlapping
         isScrollControlled: true, // make the bottom sheet fullscreen
         context: context,
         builder: (ctx) {
